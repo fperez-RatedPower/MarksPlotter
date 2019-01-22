@@ -33,4 +33,4 @@ def compute_quad_factor_bandwidth(bandwidth, linear_factor=0):
     :param linear_factor: optional, the linear factor
     :return: the quadratic factor which yields a function with the required bandwidth
     """
-    return (- 1 - linear_factor * bandwidth * 0.5) / ((bandwidth * 0.5) ** 2)
+    return (- 4 - 2 * linear_factor * bandwidth) / (bandwidth ** 2)
