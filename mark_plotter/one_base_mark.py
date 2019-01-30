@@ -25,7 +25,7 @@ def compute_mark_from_zero_linear(value, slope=-1):
     return max(mark, 0)
 
 
-def compute_quad_factor_bandwidth(bandwidth, linear_factor=0):
+def compute_quad_factor_bandwidth(bandwidth):
     """
     Computes the quadratic factor for a given bandwidth, so that the mark is zero at +- bandwidth * 0.5
 
@@ -33,4 +33,4 @@ def compute_quad_factor_bandwidth(bandwidth, linear_factor=0):
     :param linear_factor: optional, the linear factor
     :return: the quadratic factor which yields a function with the required bandwidth
     """
-    return (- 4 - 2 * linear_factor * bandwidth) / (bandwidth ** 2)
+    return - 4 / (bandwidth ** 2)
